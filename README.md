@@ -14,7 +14,7 @@ It’s a rich dataset for practicing SQL and deriving insights into online user 
 
 There were 8 queries covered several points of view of this E-commerce website from general to details
 
-*** Query 01: calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month)
+* Query 01: calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month)
 ```
   SELECT 
   distinct format_date('%Y%m',parse_date('%Y%m%d',date)) as month
