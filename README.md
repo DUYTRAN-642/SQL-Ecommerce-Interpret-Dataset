@@ -10,6 +10,27 @@ The bigquery-public-data.google_analytics_sample.ga_sessions_2017* dataset is ab
 * When: Daily sessions throughout 2017.
 * How: Traffic sources driving them to the site.
 It’s a rich dataset for practicing SQL and deriving insights into online user behavior and sales performance
+
+# Data structure
+
+Field Name	Data Type
+fullVisitorId	STRING
+date	STRING
+totals	RECORD
+totals.bounces	INTEGER
+totals.hits	INTEGER
+totals.pageviews	INTEGER
+totals.visits	INTEGER
+totals.transactions	INTEGER
+trafficSource.source	STRING
+hits	RECORD
+hits.eCommerceAction	RECORD
+hits.eCommerceAction.action_type	STRING
+hits.product	RECORD
+hits.product.productQuantity	INTEGER
+hits.product.productRevenue	INTEGER
+hits.product.productSKU	STRING
+hits.product.v2ProductName	STRING
 # Project Structure
 
 There were 8 queries covered several points of view of this E-commerce website from general to details
