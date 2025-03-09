@@ -13,6 +13,7 @@ It’s a rich dataset for practicing SQL and deriving insights into online user 
 # Project Structure
 
 There were 8 queries covered several points of view of this E-commerce website from general to details
+
 ** Query 01: calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month)
 ```
   SELECT 
