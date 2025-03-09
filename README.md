@@ -12,15 +12,17 @@ The bigquery-public-data.google_analytics_sample.ga_sessions_2017* dataset is ab
 It’s a rich dataset for practicing SQL and deriving insights into online user behavior and sales performance
 # Project Structure
 
-├── /queries/           # SQL scripts
-│   ├── query1.sql      # Monthly visits, pageviews, and transactions
-│   ├── query2.sql      # Traffic source analysis with bounce rates
-│   ├── query3.sql      # Revenue by source (month and week)
-│   ├── query4.sql      # Avg pageviews for purchasers vs. non-purchasers
-│   ├── query5.sql      # Avg transactions per user
-│   ├── query6.sql      # Avg revenue per user per visit
-│   ├── query7.sql      # Products co-purchased with "YouTube Men's Vintage Henley"
-│   ├── query8.sql      # Conversion funnel (views, add-to-cart, purchases)
-├── /docs/              # Documentation
-│   └── README.md       # This file
-└── /data/              # Optional: Sample outputs or schemas
+There were 8 queries covered several points of view of this E-commerce website from general to details
+** Query 01: calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month)
+
+SELECT 
+  distinct format_date('%Y%m',parse_date('%Y%m%d',date)) as month
+  ,count(visitId) as vistis
+  ,sum(totals.pageviews) as pageviews
+  ,sum(totals.transactions) as transactions
+ FROM `bigquery-public-data.google_analytics_sample.ga_sessions_2017*` 
+ where _table_suffix between '0101' and '0331'
+ group by 1
+ order by 1
+
+![image](https://github.com/user-attachments/assets/9e472360-2c56-4158-b372-075db82203ba)
