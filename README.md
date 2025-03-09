@@ -14,8 +14,8 @@ It’s a rich dataset for practicing SQL and deriving insights into online user 
 
 There were 8 queries covered several points of view of this E-commerce website from general to details
 ** Query 01: calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month)
-
-```SELECT 
+```
+  SELECT 
   distinct format_date('%Y%m',parse_date('%Y%m%d',date)) as month
   ,count(visitId) as vistis
   ,sum(totals.pageviews) as pageviews
@@ -23,6 +23,6 @@ There were 8 queries covered several points of view of this E-commerce website f
  FROM `bigquery-public-data.google_analytics_sample.ga_sessions_2017*` 
  where _table_suffix between '0101' and '0331'
  group by 1
- order by 1````
-
+ order by 1
+````
 ![image](https://github.com/user-attachments/assets/9e472360-2c56-4158-b372-075db82203ba)
