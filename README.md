@@ -11,6 +11,7 @@ The bigquery-public-data.google_analytics_sample.ga_sessions_2017* dataset is ab
 * How: Traffic sources driving them to the site.
 It’s a rich dataset for practicing SQL and deriving insights into online user behavior and sales performance
 # Project Structure
+
 ├── /queries/           # SQL scripts
 │   ├── query1.sql      # Monthly visits, pageviews, and transactions
 │   ├── query2.sql      # Traffic source analysis with bounce rates
