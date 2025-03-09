@@ -10,3 +10,16 @@ The bigquery-public-data.google_analytics_sample.ga_sessions_2017* dataset is ab
 * When: Daily sessions throughout 2017.
 * How: Traffic sources driving them to the site.
 It’s a rich dataset for practicing SQL and deriving insights into online user behavior and sales performance
+# Project Structure
+├── /queries/           # SQL scripts
+│   ├── query1.sql      # Monthly visits, pageviews, and transactions
+│   ├── query2.sql      # Traffic source analysis with bounce rates
+│   ├── query3.sql      # Revenue by source (month and week)
+│   ├── query4.sql      # Avg pageviews for purchasers vs. non-purchasers
+│   ├── query5.sql      # Avg transactions per user
+│   ├── query6.sql      # Avg revenue per user per visit
+│   ├── query7.sql      # Products co-purchased with "YouTube Men's Vintage Henley"
+│   ├── query8.sql      # Conversion funnel (views, add-to-cart, purchases)
+├── /docs/              # Documentation
+│   └── README.md       # This file
+└── /data/              # Optional: Sample outputs or schemas
