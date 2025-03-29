@@ -43,11 +43,11 @@ It’s a rich dataset for practicing SQL and deriving insights into online user 
 | `hits.product.productSKU`          | STRING    |
 | `hits.product.v2ProductName`       | STRING    |
 
-# Project Structure
+# ⚒️  Project Structure
 
 There were 8 queries covered several points of view of this E-commerce website from general to details
 
-* Query 01: calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month)
+* 👉🏻 Query 01: calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month)
 ```sql
   SELECT 
   distinct format_date('%Y%m',parse_date('%Y%m%d',date)) as month
@@ -64,7 +64,7 @@ There were 8 queries covered several points of view of this E-commerce website f
 ![image](https://github.com/user-attachments/assets/18bc7906-18f9-4649-bc64-10c44f976d02)
 
 
-* Query 02: Bounce rate per traffic source in July 2017 (Bounce_rate = num_bounce/total_visit) (order by total_visit DESC)
+* 👉🏻 Query 02: Bounce rate per traffic source in July 2017 (Bounce_rate = num_bounce/total_visit) (order by total_visit DESC)
 ```sql
 SELECT  
   trafficSource.source as source
@@ -79,7 +79,7 @@ limit 4
 
 ![image](https://github.com/user-attachments/assets/e7c818a9-8f80-4a46-bbb0-0145fa073f05)
 
-* Query 3: Revenue by traffic source by week, by month in June 2017
+* 👉🏻 Query 3: Revenue by traffic source by week, by month in June 2017
 ```sql
 SELECT  
   'Month' as time_type
@@ -108,7 +108,7 @@ limit 4
 
 ![image](https://github.com/user-attachments/assets/c98cb4f9-8d23-4aa9-a362-8ba105b9189a)
 
-* Query 04: Average number of pageviews by purchaser type (purchasers vs non-purchasers) in June, July 2017.
+* 👉🏻 Query 04: Average number of pageviews by purchaser type (purchasers vs non-purchasers) in June, July 2017.
 ```sql
 with t1 as(
 SELECT  
@@ -142,7 +142,7 @@ select
 
 ![image](https://github.com/user-attachments/assets/10d021c9-e7a1-4731-87c2-c8c24e7a8ffc)
 
-* Query 05: Average number of transactions per user that made a purchase in July 2017
+* 👉🏻 Query 05: Average number of transactions per user that made a purchase in July 2017
 ```sql
 SELECT 
   format_date('%Y%m', parse_date('%Y%m%d', date)) as Month
@@ -156,7 +156,7 @@ SELECT
 
 ![image](https://github.com/user-attachments/assets/df780825-828d-46ad-b6a8-478e4e95605d)
 
-* Query 06: Average amount of money spent per session. Only include purchaser data in July 2017
+* 👉🏻 Query 06: Average amount of money spent per session. Only include purchaser data in July 2017
 ```sql
 SELECT 
   format_date('%Y%m', parse_date('%Y%m%d', date)) as Month
@@ -170,7 +170,7 @@ SELECT
 
 ![image](https://github.com/user-attachments/assets/1eea5e29-c7fe-498c-8cfc-1ba2f7355709)
 
-* Query 07: Other products purchased by customers who purchased product "YouTube Men's Vintage Henley" in July 2017. Output should show product name and the quantity was ordered.
+* 👉🏻 Query 07: Other products purchased by customers who purchased product "YouTube Men's Vintage Henley" in July 2017. Output should show product name and the quantity was ordered.
 ```sql
 SELECT 
    v2ProductName as other_purchased_products
@@ -193,7 +193,7 @@ SELECT
 
 ![image](https://github.com/user-attachments/assets/e611685c-6989-4ae0-8473-c2489dbc5911)
 
-* Query 08: Calculate cohort map from product view to addtocart to purchase in Jan, Feb and March 2017. For example, 100% product view then 40% add_to_cart and 10% purchase.
+* 👉🏻 Query 08: Calculate cohort map from product view to addtocart to purchase in Jan, Feb and March 2017. For example, 100% product view then 40% add_to_cart and 10% purchase.
 Add_to_cart_rate = number product  add to cart/number product view. Purchase_rate = number product purchase/number product view. The output should be calculated in product level.
 ```sql
 with t1 as(
