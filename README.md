@@ -1,7 +1,14 @@
-# SQL-Google-Analytics-Data
+# E-commerce business – Interpret dataset in different views – SQL BigQuery
+
 a publicly available sample dataset in Google BigQuery
-# Overview
+
+# 📌 Overview
+
 This project analyzes Google Analytics data using SQL queries in Google BigQuery. It explores e-commerce performance metrics such as visits, pageviews, transactions, bounce rates, revenue, and user behavior from the bigquery-public-data.google_analytics_sample dataset. The queries focus on data from 2017, providing insights into monthly trends, traffic sources, product performance, and conversion rates.
+
+# 📂 Dataset Description & Data Structure
+
+## 📌 Data Source
 
 The bigquery-public-data.google_analytics_sample.ga_sessions_2017* dataset is about web and e-commerce analytics for a sample online store in 2017. It captures:
 
@@ -11,7 +18,10 @@ The bigquery-public-data.google_analytics_sample.ga_sessions_2017* dataset is ab
 * How: Traffic sources driving them to the site.
 It’s a rich dataset for practicing SQL and deriving insights into online user behavior and sales performance
 
-# Data structure
+* Size: the dataset for 2017 has more than 467K rows
+* Format: .CSV
+
+## 📊 Data structure
 
 | Field Name                         | Data Type |
 |------------------------------------|-----------|
@@ -38,7 +48,7 @@ It’s a rich dataset for practicing SQL and deriving insights into online user 
 There were 8 queries covered several points of view of this E-commerce website from general to details
 
 * Query 01: calculate total visit, pageview, transaction for Jan, Feb and March 2017 (order by month)
-```
+```sql
   SELECT 
   distinct format_date('%Y%m',parse_date('%Y%m%d',date)) as month
   ,count(visitId) as vistis
@@ -55,7 +65,7 @@ There were 8 queries covered several points of view of this E-commerce website f
 
 
 * Query 02: Bounce rate per traffic source in July 2017 (Bounce_rate = num_bounce/total_visit) (order by total_visit DESC)
-```
+```sql
 SELECT  
   trafficSource.source as source
   ,sum(totals.visits) as total_visits
@@ -70,7 +80,7 @@ limit 4
 ![image](https://github.com/user-attachments/assets/e7c818a9-8f80-4a46-bbb0-0145fa073f05)
 
 * Query 3: Revenue by traffic source by week, by month in June 2017
-```
+```sql
 SELECT  
   'Month' as time_type
   ,format_date('%Y%m', parse_date('%Y%m%d',date)) as time
@@ -99,7 +109,7 @@ limit 4
 ![image](https://github.com/user-attachments/assets/c98cb4f9-8d23-4aa9-a362-8ba105b9189a)
 
 * Query 04: Average number of pageviews by purchaser type (purchasers vs non-purchasers) in June, July 2017.
-```
+```sql
 with t1 as(
 SELECT  
   format_date('%Y%m', parse_date('%Y%m%d',date)) as month
@@ -133,7 +143,7 @@ select
 ![image](https://github.com/user-attachments/assets/10d021c9-e7a1-4731-87c2-c8c24e7a8ffc)
 
 * Query 05: Average number of transactions per user that made a purchase in July 2017
-```
+```sql
 SELECT 
   format_date('%Y%m', parse_date('%Y%m%d', date)) as Month
   ,sum(totals.transactions) / count(distinct fullVisitorId) as Avg_total_transactions_per_user
@@ -147,7 +157,7 @@ SELECT
 ![image](https://github.com/user-attachments/assets/df780825-828d-46ad-b6a8-478e4e95605d)
 
 * Query 06: Average amount of money spent per session. Only include purchaser data in July 2017
-```
+```sql
 SELECT 
   format_date('%Y%m', parse_date('%Y%m%d', date)) as Month
   ,(sum(productRevenue)/sum(totals.visits))/1000000 as avg_revenue_by_user_per_visit
@@ -161,7 +171,7 @@ SELECT
 ![image](https://github.com/user-attachments/assets/1eea5e29-c7fe-498c-8cfc-1ba2f7355709)
 
 * Query 07: Other products purchased by customers who purchased product "YouTube Men's Vintage Henley" in July 2017. Output should show product name and the quantity was ordered.
-```
+```sql
 SELECT 
    v2ProductName as other_purchased_products
   ,sum(productQuantity) as quantity
@@ -185,7 +195,7 @@ SELECT
 
 * Query 08: Calculate cohort map from product view to addtocart to purchase in Jan, Feb and March 2017. For example, 100% product view then 40% add_to_cart and 10% purchase.
 Add_to_cart_rate = number product  add to cart/number product view. Purchase_rate = number product purchase/number product view. The output should be calculated in product level.
-```
+```sql
 with t1 as(
 SELECT 
   format_date('%Y%m', parse_date('%Y%m%d', date)) as month
