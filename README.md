@@ -239,6 +239,19 @@ order by 1
 
 ![image](https://github.com/user-attachments/assets/19c69a6a-0264-4c8d-8c3a-e8c43db70f05)
 
+# 🔎 Conclusions
+
+  - ➡️ Identified traffic trends, peak periods, and key user behavior metrics (pageviews, bounce rates, transactions).
+  - ➡️ Analyzed top-performing products and traffic sources, offering insights into marketing effectiveness and conversion rates.
+
+- **Contributions:**
+  - Demonstrated SQL query applications to Google Analytics data in BigQuery for business insights.
+  - Provided actionable recommendations for optimizing e-commerce strategies and marketing efforts.
+
+- **Impact:**
+  - Showcased the value of data analysis in improving website performance and driving data-driven decisions.
+
+
 # SQL Skills Learned from This Project
 
 * Working with Nested and Repeated Fields: how to access data within nested structures, transforming arrays into rows for analysis
