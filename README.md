@@ -1,4 +1,6 @@
 # E-commerce business – Interpret dataset in different views – SQL BigQuery
+![image](https://github.com/user-attachments/assets/a6d436f2-9797-4948-97a8-c82a7b945e22)
+
 
 a publicly available sample dataset in Google BigQuery
 
@@ -252,7 +254,7 @@ order by 1
   - Showcased the value of data analysis in improving website performance and driving data-driven decisions.
 
 
-# SQL Skills Learned from This Project
+# 🤩 SQL Skills Learned from This Project 👍
 
 * Working with Nested and Repeated Fields: how to access data within nested structures, transforming arrays into rows for analysis
 * Using Common Table Expressions (CTEs): Breaking a problem into smaller, reusable pieces, Simplifying Logic, avoiding repetitive subqueries, improving readability.
