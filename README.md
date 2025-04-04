@@ -68,10 +68,10 @@ There were 8 queries covered several points of view of this E-commerce website f
 
 ![image](https://github.com/user-attachments/assets/18bc7906-18f9-4649-bc64-10c44f976d02)
 
-   * Visits show session counts; growth may indicate rising traffic.
-   * Pageviews reflect engagement; high ratios suggest sticky content.
-   * Transactions track purchases; peaks might tie to January sales.
-   * Data covers Q1 2017 only, filtered by table suffix.
+      * Visits show session counts; growth may indicate rising traffic.
+      * Pageviews reflect engagement; high ratios suggest sticky content.
+      * Transactions track purchases; peaks might tie to January sales.
+      * Data covers Q1 2017 only, filtered by table suffix.
 
 * 👉🏻 Query 02: Bounce rate per traffic source in July 2017 (Bounce_rate = num_bounce/total_visit) (order by total_visit DESC)
 ```sql
