@@ -123,7 +123,7 @@ limit 4
 
 ![image](https://github.com/user-attachments/assets/c98cb4f9-8d23-4aa9-a362-8ba105b9189a)
 
-=> Insights Sought:
+**=> Insights Sought:**
 
 Traffic Quality: High bounce rates show low engagement; low rates indicate quality traffic.
 
