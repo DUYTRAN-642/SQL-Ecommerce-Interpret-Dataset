@@ -94,7 +94,20 @@ limit 4
 
 ![image](https://github.com/user-attachments/assets/e7c818a9-8f80-4a46-bbb0-0145fa073f05)
 
+**=> Insights Sought:**
+
+Traffic Quality: High bounce rates show low engagement; low rates indicate quality traffic.
+
+Source Performance: Reveals which top sources (e.g., Google, direct) keep users engaged.
+
+Resource Allocation: Highlights where to optimize or invest marketing efforts.
+
+Behavior Trends: Spots July 2017 patterns for seasonal or campaign insights.
+
 * 👉🏻 Query 3: Revenue by traffic source by week, by month in June 2017
+
+     * This query compares the average pageviews per unique visitor for purchasers versus non-purchasers in June and July 2017 to understand how engagement differs between these groups.
+       
 ```sql
 SELECT  
   'Month' as time_type
@@ -125,13 +138,11 @@ limit 4
 
 **=> Insights Sought:**
 
-Traffic Quality: High bounce rates show low engagement; low rates indicate quality traffic.
+Purchasers likely have higher average pageviews, indicating more exploration before buying.
 
-Source Performance: Reveals which top sources (e.g., Google, direct) keep users engaged.
+Non-purchasers with low pageviews may signal quick exits or lack of interest.
 
-Resource Allocation: Highlights where to optimize or invest marketing efforts.
-
-Behavior Trends: Spots July 2017 patterns for seasonal or campaign insights.
+June vs. July differences could reflect seasonal engagement shifts.
 
 * 👉🏻 Query 04: Average number of pageviews by purchaser type (purchasers vs non-purchasers) in June, July 2017.
 ```sql
