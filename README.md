@@ -77,6 +77,9 @@ There were 8 queries covered several points of view of this E-commerce website f
 => Data covers Q1 2017 only, filtered by table suffix.
 
 * 👉🏻 Query 02: Bounce rate per traffic source in July 2017 (Bounce_rate = num_bounce/total_visit) (order by total_visit DESC)
+
+     * This query is executed to evaluate the effectiveness of different traffic sources driving visitors to the website in July 2017. By calculating the bounce rate (bounces divided by visits) for each source, it helps assess user engagement and traffic quality, focusing on the top 4 sources by visit volume.
+       
 ```sql
 SELECT  
   trafficSource.source as source
@@ -119,6 +122,16 @@ limit 4
 ```
 
 ![image](https://github.com/user-attachments/assets/c98cb4f9-8d23-4aa9-a362-8ba105b9189a)
+
+=> Insights Sought:
+
+Traffic Quality: High bounce rates show low engagement; low rates indicate quality traffic.
+
+Source Performance: Reveals which top sources (e.g., Google, direct) keep users engaged.
+
+Resource Allocation: Highlights where to optimize or invest marketing efforts.
+
+Behavior Trends: Spots July 2017 patterns for seasonal or campaign insights.
 
 * 👉🏻 Query 04: Average number of pageviews by purchaser type (purchasers vs non-purchasers) in June, July 2017.
 ```sql
