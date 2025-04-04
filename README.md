@@ -105,8 +105,6 @@ Resource Allocation: Highlights where to optimize or invest marketing efforts.
 Behavior Trends: Spots July 2017 patterns for seasonal or campaign insights.
 
 * 👉🏻 Query 3: Revenue by traffic source by week, by month in June 2017
-
-     * This query compares the average pageviews per unique visitor for purchasers versus non-purchasers in June and July 2017 to understand how engagement differs between these groups.
        
 ```sql
 SELECT  
@@ -136,15 +134,11 @@ limit 4
 
 ![image](https://github.com/user-attachments/assets/c98cb4f9-8d23-4aa9-a362-8ba105b9189a)
 
-**=> Insights Sought:**
-
-Purchasers likely have higher average pageviews, indicating more exploration before buying.
-
-Non-purchasers with low pageviews may signal quick exits or lack of interest.
-
-June vs. July differences could reflect seasonal engagement shifts.
 
 * 👉🏻 Query 04: Average number of pageviews by purchaser type (purchasers vs non-purchasers) in June, July 2017.
+
+    * This query compares the average pageviews per unique visitor for purchasers versus non-purchasers in June and July 2017 to understand how engagement differs between these groups.
+          
 ```sql
 with t1 as(
 SELECT  
@@ -177,6 +171,14 @@ select
 ```
 
 ![image](https://github.com/user-attachments/assets/10d021c9-e7a1-4731-87c2-c8c24e7a8ffc)
+
+**=> Insights Sought:**
+
+Purchasers likely have higher average pageviews, indicating more exploration before buying.
+
+Non-purchasers with low pageviews may signal quick exits or lack of interest.
+
+June vs. July differences could reflect seasonal engagement shifts.
 
 * 👉🏻 Query 05: Average number of transactions per user that made a purchase in July 2017
 ```sql
